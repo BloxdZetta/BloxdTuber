@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BloxdTuber | Bloxd.io Creator Discord, Giveaways & Texture Packs</title>
+  <meta name="description" content="BloxdTuber Discord delivers free Bloxd.io texture packs, thumbnail templates, giveaway alerts and creator growth coaching in one premium community.">
+  <meta name="keywords" content="Bloxd.io, Bloxd YouTube, Bloxd texture packs, Bloxd giveaways, Bloxd utility, thumbnail templates">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bloxdtuber.gg/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BloxdTuber | Bloxd.io Creator Discord, Giveaways & Texture Packs">
+  <meta property="og:description" content="Join BloxdTuber for free Bloxd.io texture packs, creator templates, live giveaways and Discord growth coaching.">
+  <meta property="og:url" content="https://bloxdtuber.gg/">
+  <meta property="og:site_name" content="BloxdTuber">
+  <meta property="og:image" content="https://bloxdtuber.gg/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BloxdTuber | Bloxd.io Creator Discord, Giveaways & Texture Packs">
+  <meta name="twitter:description" content="BloxdTuber helps Bloxd.io creators grow with free assets, algorithm insights and live giveaway opportunities.">
+  <meta name="twitter:image" content="https://bloxdtuber.gg/assets/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BloxdTuber",
+    "url": "https://bloxdtuber.gg/",
+    "description": "A premium Bloxd.io Discord community for creators and players with texture packs, giveaways, thumbnails and coaching.",
+    "sameAs": ["https://discord.gg/4aB5Qbp5kX"]
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0f19;
+      --surface: rgba(16,21,34,0.85);
+      --surface-strong: rgba(15,20,34,0.98);
+      --border: rgba(148,163,184,0.14);
+      --accent: #38bdf8;
+      --accent-strong: #65b1ff;
+      --blurple: #5865f2;
+      --gold: #f5c230;
+      --tone: #e7efff;
+      --muted: #9aa4bd;
+      --shadow: 0 30px 90px rgba(0,0,0,0.22);
+      --radius: 24px;
+      --max-width: 1160px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--tone);
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 24%),
+                  radial-gradient(circle at bottom right, rgba(88,101,242,0.15), transparent 22%),
+                  linear-gradient(180deg, #080c14 0%, #090d18 55%, #06090f 100%);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: repeating-radial-gradient(circle at 30% 20%, rgba(255,255,255,0.02) 0 1px, transparent 1px 120px);
+      opacity: 0.22;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { padding: 0; margin: 0; list-style: none; }
+    button { font: inherit; }
+    .wrap { width: min(100%, var(--max-width)); margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: rgba(11,15,25,0.78);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 20px 0;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      color: var(--tone);
+    }
+    .brand__mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--blurple));
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 10px 30px rgba(56,189,248,0.18);
+    }
+    .brand__mark::before {
+      content: "B";
+      font-weight: 800;
+      font-size: 1rem;
+      color: #fff;
+    }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+    .nav__links a:hover { color: var(--tone); }
+    .nav__join {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(88,101,242,0.28);
+      background: linear-gradient(135deg, rgba(88,101,242,0.90), rgba(56,189,248,0.88));
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 18px 40px rgba(56,189,248,0.24);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .nav__join:hover { transform: translateY(-2px); box-shadow: 0 22px 46px rgba(56,189,248,0.34); }
+
+    .hero {
+      padding: 96px 0 68px;
+    }
+    .hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 32px;
+      align-items: end;
+    }
+    .hero__content {
+      max-width: 660px;
+    }
+    .hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+    .hero__eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(56,189,248,0.95);
+      box-shadow: 0 0 24px rgba(56,189,248,0.3);
+    }
+    .hero__title {
+      font-size: clamp(3.5rem, 5vw, 5.5rem);
+      line-height: 0.95;
+      margin: 0;
+      background: linear-gradient(135deg, #ffffff 10%, var(--accent) 45%, var(--blurple) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 40px rgba(56,189,248,0.15);
+    }
+    .hero__text {
+      margin: 24px 0 0;
+      font-size: 1.07rem;
+      max-width: 620px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    .hero__text strong { color: var(--tone); }
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .hero__actions .btn {
+      min-width: 220px;
+    }
+    .hero__auth {
+      margin-top: 24px;
+      max-width: 640px;
+      display: grid;
+      gap: 16px;
+    }
+    .hero__auth p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+    .hero__auth-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .btn--oauth {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: var(--tone);
+      font-weight: 700;
+      transition: transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+    .btn--oauth:hover {
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(56,189,248,0.28);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.18);
+    }
+    .btn--oauth-icon {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      font-size: 1rem;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.12);
+    }
+    .btn--oauth-google .btn--oauth-icon {
+      background: #ffffff;
+      color: #1f2937;
+    }
+    .btn--oauth-discord {
+      border-color: rgba(88,101,242,0.32);
+    }
+    .btn--oauth-discord .btn--oauth-icon {
+      background: linear-gradient(135deg, rgba(88,101,242,0.95), rgba(56,189,248,0.9));
+      color: #fff;
+    }
+    .hero__stat-card {
+      position: relative;
+      overflow: hidden;
+      padding: 32px;
+      border-radius: 32px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(26px);
+      box-shadow: var(--shadow);
+    }
+    .hero__stat-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(88,101,242,0.22), transparent 30%);
+      pointer-events: none;
+    }
+    .hero__stat-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .hero__stat-flag span {
+      width: 8px; height: 8px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 16px rgba(56,189,248,0.25);
+    }
+    .hero__stat-title {
+      font-size: 1.55rem;
+      margin: 0 0 16px;
+      line-height: 1.2;
+      color: #fff;
+    }
+    .hero__metrics {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+    .hero__metric {
+      display: grid;
+      gap: 8px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero__metric strong {
+      font-size: 1.05rem;
+      color: #fff;
+      display: block;
+    }
+    .hero__metric span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .hero__invite {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+      font-size: 0.94rem;
+      border: 1px dashed rgba(88,101,242,0.18);
+    }
+    .hero__invite strong { color: var(--tone); }
+
+    .section {
+      padding: 90px 0;
+    }
+    .section__head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 52px;
+    }
+    .section__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: var(--accent);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-weight: 700;
+    }
+    .section__eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(56,189,248,0.95);
+      box-shadow: 0 0 20px rgba(56,189,248,0.2);
+    }
+    .section__title {
+      font-size: clamp(2rem, 3vw, 2.9rem);
+      margin: 0 0 18px;
+      line-height: 1.08;
+      color: #fff;
+    }
+    .section__copy {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .feature-grid,
+    .giveaway-grid,
+    .pulse-grid {
+      display: grid;
+      gap: 24px;
+    }
+    .feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .giveaway-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .pulse-grid { grid-template-columns: 1.2fr minmax(320px, 0.8fr); }
+
+    .glass-card {
+      position: relative;
+      padding: 32px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(24px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(56,189,248,0.26);
+      box-shadow: 0 32px 88px rgba(0,0,0,0.2);
+    }
+    .glass-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.14), transparent 25%);
+      pointer-events: none;
+    }
+    .feature-card__icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      margin-bottom: 22px;
+      color: #fff;
+      background: linear-gradient(135deg, rgba(56,189,248,0.95), rgba(88,101,242,0.92));
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
+    }
+    .feature-card h3 {
+      margin: 0 0 16px;
+      font-size: 1.25rem;
+      line-height: 1.18;
+      color: #fff;
+    }
+    .feature-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 0.95rem;
+    }
+
+    .architecture-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 0.9fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .architecture-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .architecture-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+    }
+    .architecture-item strong { color: #fff; display: block; margin-bottom: 6px; }
+    .architecture-dot {
+      width: 12px;
+      height: 12px;
+      margin-top: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(56,189,248,0.25);
+      flex-shrink: 0;
+    }
+
+    .discord-panel {
+      padding: 26px;
+      border-radius: 30px;
+      background: rgba(7,12,20,0.94);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02), 0 26px 60px rgba(0,0,0,0.25);
+    }
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    .panel-header strong {
+      color: var(--tone);
+    }
+    .channel-grid {
+      display: grid;
+      gap: 12px;
+    }
+    .channel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .channel::before {
+      content: "#";
+      color: rgba(255,255,255,0.28);
+      margin-right: 6px;
+    }
+    .badge { padding: 6px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; }
+    .badge--live { background: rgba(245,194,48,0.14); color: var(--gold); }
+    .badge--boost { background: rgba(88,101,242,0.13); color: #a1b2ff; }
+    .badge--vip { background: rgba(56,189,248,0.14); color: var(--accent); }
+
+    .giveaway-card {
+      display: grid;
+      gap: 18px;
+      padding: 30px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform .24s ease;
+    }
+    .giveaway-card:hover { transform: translateY(-6px); }
+    .giveaway-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .giveaway-top span { font-size: 0.78rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; }
+    .giveaway-card h3 { margin: 0; font-size: 1.18rem; color: #fff; }
+    .giveaway-card p { margin: 0; color: var(--muted); line-height: 1.75; }
+    .countdown { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .countdown-item {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+    .countdown-item b { display: block; color: #fff; font-size: 1.15rem; margin-bottom: 6px; }
+    .countdown-item span { color: var(--muted); font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    .final-cta {
+      padding: 100px 0 80px;
+      text-align: center;
+    }
+    .final-cta-card {
+      position: relative;
+      margin: 0 auto;
+      max-width: 840px;
+      padding: 42px 36px;
+      border-radius: 34px;
+      background: rgba(10,14,22,0.96);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 40px 90px rgba(0,0,0,0.28);
+      overflow: hidden;
+    }
+    .final-cta-card::before {
+      content: "";
+      position: absolute;
+      inset: -40px;
+      background: conic-gradient(from 180deg at 50% 50%, rgba(56,189,248,0.12), rgba(88,101,242,0.14), rgba(245,194,48,0.12), transparent 65%);
+      filter: blur(40px);
+      pointer-events: none;
+    }
+    .final-cta-card h2 { margin: 0 0 18px; font-size: clamp(2rem, 3vw, 2.75rem); line-height: 1.05; color: #fff; }
+    .final-cta-card p { margin: 0 0 32px; color: var(--muted); font-size: 1rem; line-height: 1.8; max-width: 620px; margin-left: auto; margin-right: auto; }
+
+    .footer {
+      padding: 42px 0 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+    .footer__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .footer__fine {
+      margin-top: 26px;
+      color: rgba(255,255,255,0.58);
+      font-size: 0.82rem;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+    }
+    .btn--primary {
+      padding: 16px 24px;
+      background: linear-gradient(135deg, var(--blurple), var(--accent));
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 18px 40px rgba(56,189,248,0.18);
+    }
+    .btn--ghost {
+      padding: 14px 22px;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--tone);
+      background: rgba(255,255,255,0.04);
+    }
+    .btn--primary:hover,
+    .btn--ghost:hover { transform: translateY(-1px); }
+
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 980px) {
+      .hero__grid,
+      .architecture-grid,
+      .pulse-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 72px; }
+      .hero__stat-card { margin-top: 16px; }
+      .feature-grid,
+      .giveaway-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .wrap { padding: 0 18px; }
+      .nav__inner { flex-wrap: wrap; }
+      .nav__links { width: 100%; justify-content: space-between; gap: 16px; }
+      .nav__join { width: 100%; justify-content: center; }
+      .hero { padding-top: 56px; }
+      .hero__title { font-size: 3.2rem; }
+      .hero__actions { flex-direction: column; align-items: stretch; }
+      .hero__stat-card { padding: 28px; }
+      .section { padding: 72px 0; }
+      .final-cta-card { padding: 32px 26px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <div class="nav__inner">
+        <a class="brand" href="#top">
+          <span class="brand__mark" aria-hidden="true"></span>
+          BloxdTuber
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#toolkit">Toolkit</a>
+          <a href="#architecture">Discord</a>
+          <a href="#giveaways">Giveaways</a>
+          <a href="#pulse">Server Pulse</a>
+        </nav>
+        <a class="nav__join btn btn--primary" href="https://discord.gg/4aB5Qbp5k" target="_blank" rel="noopener noreferrer">Join Discord</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__grid">
+          <div class="hero__content reveal">
+            <div class="hero__eyebrow">Premium Bloxd.io Creator Community</div>
+            <h1 class="hero__title">BloxdTuber</h1>
+            <p class="hero__text">Transform from a solo Bloxd.io creator into a growth-focused channel builder with free texture packs, thumbnail templates, algorithm feedback and live Bloxd giveaways in one elite Discord.</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="https://discord.gg/4aB5Qbp5k" target="_blank" rel="noopener noreferrer">Join BloxdTuber</a>
+              <a class="btn btn--ghost" href="#toolkit">Explore the Toolkit</a>
+            </div>
+            <div class="hero__auth">
+              <p>Connect with account-based signup to launch faster. Google and Discord auth are ready for your integration.</p>
+              <div class="hero__auth-buttons">
+                <a class="btn btn--oauth btn--oauth-google" href="/auth/google" title="Google OAuth signup placeholder">
+                  <span class="btn--oauth-icon">G</span>
+                  Sign up with Google
+                </a>
+                <a class="btn btn--oauth btn--oauth-discord" href="/auth/discord" title="Discord OAuth signup placeholder">
+                  <span class="btn--oauth-icon">D</span>
+                  Sign up with Discord
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero__stat-card reveal" aria-label="Live Bloxd.io server stats">
+            <div class="hero__stat-flag">Official Bloxd.io Growth Hub</div>
+            <h2 class="hero__stat-title">Live community metrics, giveaways and free creator assets.</h2>
+            <div class="hero__metrics">
+              <div class="hero__metric">
+                <strong id="serverCount">--</strong>
+                <span>members currently online in the server</span>
+              </div>
+              <div class="hero__metric">
+                <strong>Free Bloxd texture packs</strong>
+                <span>Built for Bloxd players who want custom skins and eye-catching visuals.</span>
+              </div>
+              <div class="hero__metric">
+                <strong>Live Bloxd giveaways</strong>
+                <span>Win premium server ranks, creator boosts and play rewards every week.</span>
+              </div>
+            </div>
+            <div class="hero__invite">
+              <strong>Official invite</strong>
+              <span>discord.gg/4aB5Qbp5k</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="toolkit">
+        <div class="section__head reveal">
+          <div class="section__eyebrow">Creator Toolkit</div>
+          <h2 class="section__title">Everything a Bloxd.io creator needs to launch faster</h2>
+          <p class="section__copy">This is more than a Discord server. It is a growth system. Every resource is built to help you make better videos, faster thumbnails and higher-retention reels for Bloxd YouTube audiences.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="glass-card feature-card reveal">
+            <div class="feature-card__icon">✦</div>
+            <h3>Premium Editing Assets</h3>
+            <p>Get high-converting thumbnail templates, overlays, SFX and screen packages designed for Bloxd.io videos that stand out in feeds.</p>
+          </article>
+          <article class="glass-card feature-card reveal">
+            <div class="feature-card__icon">🧩</div>
+            <h3>Custom Texture Packs</h3>
+            <p>Download exclusive Bloxd texture packs created by the community, updated for new maps and optimized for fast performance.</p>
+          </article>
+          <article class="glass-card feature-card reveal">
+            <div class="feature-card__icon">⚡</div>
+            <h3>Master the Algorithm</h3>
+            <p>Share your script, hook or thumbnail and get direct creator feedback to turn Bloxd content into a repeatable YouTube winner.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="architecture">
+        <div class="section__head reveal">
+          <div class="section__eyebrow">Discord Architecture</div>
+          <h2 class="section__title">A production-ready server built for Bloxd creators and players</h2>
+          <p class="section__copy">From self roles to matchmaking voice calls and giveaway funnels, every channel is arranged to reduce friction and keep creators moving toward publish-ready content.</p>
+        </div>
+
+        <div class="architecture-grid reveal">
+          <div>
+            <div class="architecture-list">
+              <div class="architecture-item"><span class="architecture-dot"></span><div><strong>Fast onboarding</strong> — rules, self-role setup and boost rewards so new members join and contribute immediately.</div></div>
+              <div class="architecture-item"><span class="architecture-dot"></span><div><strong>Resource tiers</strong> — overlays, texture packs and SFX separated into free, medium and premium channels for fast discovery.</div></div>
+              <div class="architecture-item"><span class="architecture-dot"></span><div><strong>Creator workflow</strong> — #youtuber-chat, #featured-video and team voice channels built for collaboration and review.</div></div>
+              <div class="architecture-item"><span class="architecture-dot"></span><div><strong>Live engagement</strong> — giveaways, proof channels and active creator momentum that keep the community moving.</div></div>
+            </div>
+          </div>
+          <aside class="discord-panel">
+            <div class="panel-header"><strong>BloxdTuber</strong><span>1518314264165617855</span></div>
+            <div class="channel-grid">
+              <div class="channel">general <span class="badge badge--live">Active</span></div>
+              <div class="channel">yt-creator <span class="badge badge--vip">Creator</span></div>
+              <div class="channel">#youtuber-chat</div>
+              <div class="channel">#texture-packs</div>
+              <div class="channel">#giveaways <span class="badge badge--live">Live</span></div>
+              <div class="channel">#overlays-premium <span class="badge badge--boost">Boost</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="giveaways">
+        <div class="section__head reveal">
+          <div class="section__eyebrow">Giveaways & Prizes</div>
+          <h2 class="section__title">Regular Bloxd.io reward drops with top creator perks</h2>
+          <p class="section__copy">Join the server and be first in line for the next $400 creator rank giveaway, custom role rewards and regular Bloxd prize cycles. If there isn't an active event at this exact moment, that's normal — the next prize drop is always being prepared.</p>
+        </div>
+
+        <div class="giveaway-grid reveal">
+          <article class="giveaway-card">
+            <div class="giveaway-top"><span>Upcoming</span><span>#featured-video</span></div>
+            <h3>Creator Spotlight Reward</h3>
+            <p>Submit your best Bloxd.io clip and win a featured slot across the server with a permanent highlight for creators.</p>
+            <div class="countdown" data-countdown="2026-08-05T18:00:00Z">
+              <div class="countdown-item"><b data-unit="d">--</b><span>days</span></div>
+              <div class="countdown-item"><b data-unit="h">--</b><span>hours</span></div>
+              <div class="countdown-item"><b data-unit="m">--</b><span>min</span></div>
+            </div>
+          </article>
+          <article class="giveaway-card">
+            <div class="giveaway-top"><span>Upcoming</span><span>#giveaways</span></div>
+            <h3>Premium Server Rank</h3>
+            <p>Win a $400 creator rank prize, plus custom role perks, access to top creator channels and faster support.</p>
+            <div class="countdown" data-countdown="2026-08-11T20:00:00Z">
+              <div class="countdown-item"><b data-unit="d">--</b><span>days</span></div>
+              <div class="countdown-item"><b data-unit="h">--</b><span>hours</span></div>
+              <div class="countdown-item"><b data-unit="m">--</b><span>min</span></div>
+            </div>
+          </article>
+          <article class="giveaway-card">
+            <div class="giveaway-top"><span>Upcoming</span><span>#events</span></div>
+            <h3>Bloxd Currency Drop</h3>
+            <p>Active members earn random in-game currency rewards while sharing creative ideas and contributing to the server.</p>
+            <div class="countdown" data-countdown="2026-08-03T14:00:00Z">
+              <div class="countdown-item"><b data-unit="d">--</b><span>days</span></div>
+              <div class="countdown-item"><b data-unit="h">--</b><span>hours</span></div>
+              <div class="countdown-item"><b data-unit="m">--</b><span>min</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="pulse">
+        <div class="section__head reveal">
+          <div class="section__eyebrow">Server Pulse</div>
+          <h2 class="section__title">Live Bloxd.io Discord stats powered by the widget</h2>
+          <p class="section__copy">See online members, connected channels and gateway activity directly from Discord API data. The pulse proves this community is active and ready for creators.</p>
+        </div>
+
+        <div class="pulse-grid reveal">
+          <article class="glass-card">
+            <div class="hero__stat-flag">Discord widget live</div>
+            <div class="hero__stat-title" style="font-size: 1.6rem;">Current server activity</div>
+            <div class="hero__metrics" style="grid-template-columns: 1fr; gap: 18px;">
+              <div class="hero__metric"><strong id="widgetName">BloxdTuber</strong><span>Server name loaded from Discord widget.</span></div>
+              <div class="hero__metric"><strong id="widgetOnline">--</strong><span>Members online from the widget API.</span></div>
+              <div class="hero__metric"><strong id="widgetChannels">--</strong><span>Channels active in the Discord widget preview.</span></div>
+              <div class="hero__metric"><strong id="widgetPresence">--</strong><span>Real-time presence data from the official guild widget.</span></div>
+            </div>
+            <div class="hero__invite">
+              <strong>Invite</strong>
+              <span><a href="https://discord.gg/4aB5Qbp5k" target="_blank" rel="noopener noreferrer" style="color: inherit;">discord.gg/4aB5Qbp5k</a></span>
+            </div>
+          </article>
+
+          <aside class="glass-card" style="display: grid; gap: 22px;">
+            <div class="hero__stat-flag">Why join now?</div>
+            <ul style="display:grid; gap:14px; padding:0; margin:0; color: var(--muted); font-size: 0.98rem;">
+              <li>• Instant access to free Bloxd.io texture packs and thumbnail templates.</li>
+              <li>• Direct creator coaching for Bloxd YouTube algorithm and retention.</li>
+              <li>• Weekly giveaways, booster rewards and spotlight contests.</li>
+              <li>• Organized channels for resources, promotions and youtuber support.</li>
+            </ul>
+            <a class="btn btn--primary" href="https://discord.gg/4aB5Qbp5k" target="_blank" rel="noopener noreferrer">Join the Official Server</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="final-cta reveal">
+        <div class="final-cta-card">
+          <div class="hero__eyebrow">Ready to level up</div>
+          <h2>From content draft to Bloxd.io launch-ready in one Discord.</h2>
+          <p>Join BloxdTuber and use our creator toolkit, live giveaways, and expert feedback to stop wasting time and start growing faster.</p>
+          <a class="btn btn--primary" href="https://discord.gg/4aB5Qbp5k" target="_blank" rel="noopener noreferrer">Join the Discord Now</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true"></span>BloxdTuber</a>
+        <div class="footer__links">
+          <a href="#toolkit">Toolkit</a>
+          <a href="#architecture">Discord</a>
+          <a href="#giveaways">Giveaways</a>
+          <a href="#pulse">Pulse</a>
+        </div>
+      </div>
+      <p class="footer__fine">© 2026 BloxdTuber. Elite Bloxd.io creator community. Not affiliated with Bloxd.io.</p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var revealEls = document.querySelectorAll('.reveal');
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if ('IntersectionObserver' in window && !prefersReducedMotion) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        revealEls.forEach(function (el) { observer.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var countdowns = document.querySelectorAll('[data-countdown]');
+      function updateCountdown() {
+        var now = Date.now();
+        countdowns.forEach(function (element) {
+          var target = new Date(element.getAttribute('data-countdown')).getTime();
+          var diff = Math.max(0, target - now);
+          var days = Math.floor(diff / 86400000);
+          var hours = Math.floor((diff % 86400000) / 3600000);
+          var minutes = Math.floor((diff % 3600000) / 60000);
+          var dNode = element.querySelector('[data-unit="d"]');
+          var hNode = element.querySelector('[data-unit="h"]');
+          var mNode = element.querySelector('[data-unit="m"]');
+          if (dNode) dNode.textContent = String(days).padStart(2, '0');
+          if (hNode) hNode.textContent = String(hours).padStart(2, '0');
+          if (mNode) mNode.textContent = String(minutes).padStart(2, '0');
+        });
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 60000);
+
+      var serverCount = document.getElementById('serverCount');
+      var widgetName = document.getElementById('widgetName');
+      var widgetOnline = document.getElementById('widgetOnline');
+      var widgetChannels = document.getElementById('widgetChannels');
+      var widgetPresence = document.getElementById('widgetPresence');
+      var GUILD_ID = '1518314264165617855';
+      var WIDGET_URL = 'https://discord.com/api/guilds/' + GUILD_ID + '/widget.json';
+
+      fetch(WIDGET_URL, { cache: 'no-store' })
+        .then(function (response) {
+          if (!response.ok) throw new Error('Widget unreachable');
+          return response.json();
+        })
+        .then(function (data) {
+          if (serverCount) serverCount.textContent = data.presence_count ? data.presence_count + ' online' : 'Live now';
+          if (widgetName) widgetName.textContent = data.name || 'BloxdTuber';
+          if (widgetOnline) widgetOnline.textContent = data.presence_count ? data.presence_count + ' online' : 'Members active';
+          if (widgetChannels) widgetChannels.textContent = data.channels ? data.channels.length + ' channels' : 'Channel list ready';
+          if (widgetPresence) widgetPresence.textContent = data.presence_count ? data.presence_count + ' live' : 'Active presence';
+        })
+        .catch(function () {
+          if (serverCount) serverCount.textContent = 'Online data unavailable';
+          if (widgetName) widgetName.textContent = 'BloxdTuber';
+          if (widgetOnline) widgetOnline.textContent = 'Unable to load widget';
+          if (widgetChannels) widgetChannels.textContent = 'Widget disabled';
+          if (widgetPresence) widgetPresence.textContent = 'Retry later';
+        });
+    })();
+  </script>
+</body>
+</html>
