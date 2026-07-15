@@ -32,16 +32,17 @@
     :root {
       color-scheme: dark;
       --bg: #0b0f19;
-      --surface: rgba(16,21,34,0.85);
-      --surface-strong: rgba(15,20,34,0.98);
-      --border: rgba(148,163,184,0.14);
-      --accent: #38bdf8;
-      --accent-strong: #65b1ff;
-      --blurple: #5865f2;
-      --gold: #f5c230;
-      --tone: #e7efff;
-      --muted: #9aa4bd;
-      --shadow: 0 30px 90px rgba(0,0,0,0.22);
+      --surface: rgba(18,12,19,0.88);
+      --surface-strong: rgba(12,8,14,0.98);
+      --border: rgba(255,125,125,0.14);
+      --accent: #ff3b4f;
+      --accent-strong: #ff7a84;
+      --brand-red: #d31c2b;
+      --highlight: #ff5f72;
+      --gold: #fbbf24;
+      --tone: #f4f5fa;
+      --muted: #b5bccf;
+      --shadow: 0 32px 110px rgba(0,0,0,0.28);
       --radius: 24px;
       --max-width: 1160px;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -53,9 +54,9 @@
       min-height: 100vh;
       margin: 0;
       color: var(--tone);
-      background: radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 24%),
-                  radial-gradient(circle at bottom right, rgba(88,101,242,0.15), transparent 22%),
-                  linear-gradient(180deg, #080c14 0%, #090d18 55%, #06090f 100%);
+      background: radial-gradient(circle at top left, rgba(255,95,112,0.16), transparent 24%),
+                  radial-gradient(circle at bottom right, rgba(211,28,43,0.12), transparent 22%),
+                  linear-gradient(180deg, #06050a 0%, #0b0a11 55%, #050406 100%);
     }
 
     body::before {
@@ -105,8 +106,8 @@
       border-radius: 14px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--accent), var(--blurple));
-      box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 10px 30px rgba(56,189,248,0.18);
+      background: linear-gradient(135deg, var(--accent), var(--brand-red));
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 12px 36px rgba(255,95,112,0.28);
     }
     .brand__mark::before {
       content: "B";
@@ -129,14 +130,14 @@
       gap: 10px;
       padding: 14px 22px;
       border-radius: 999px;
-      border: 1px solid rgba(88,101,242,0.28);
-      background: linear-gradient(135deg, rgba(88,101,242,0.90), rgba(56,189,248,0.88));
+      border: 1px solid rgba(255,95,112,0.32);
+      background: linear-gradient(135deg, rgba(211,28,43,0.92), rgba(255,95,112,0.92));
       color: #fff;
       font-weight: 700;
-      box-shadow: 0 18px 40px rgba(56,189,248,0.24);
+      box-shadow: 0 18px 40px rgba(255,95,112,0.28);
       transition: transform .22s ease, box-shadow .22s ease;
     }
-    .nav__join:hover { transform: translateY(-2px); box-shadow: 0 22px 46px rgba(56,189,248,0.34); }
+    .nav__join:hover { transform: translateY(-2px); box-shadow: 0 22px 46px rgba(255,95,112,0.38); }
 
     .hero {
       padding: 96px 0 68px;
@@ -166,18 +167,18 @@
       width: 8px;
       height: 8px;
       border-radius: 999px;
-      background: rgba(56,189,248,0.95);
-      box-shadow: 0 0 24px rgba(56,189,248,0.3);
+      background: rgba(255,95,112,0.95);
+      box-shadow: 0 0 24px rgba(255,95,112,0.32);
     }
     .hero__title {
       font-size: clamp(3.5rem, 5vw, 5.5rem);
       line-height: 0.95;
       margin: 0;
-      background: linear-gradient(135deg, #ffffff 10%, var(--accent) 45%, var(--blurple) 100%);
+      background: linear-gradient(135deg, #ffffff 10%, var(--accent) 40%, var(--brand-red) 100%);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      text-shadow: 0 0 40px rgba(56,189,248,0.15);
+      text-shadow: 0 0 40px rgba(255,95,112,0.18);
     }
     .hero__text {
       margin: 24px 0 0;
@@ -185,6 +186,7 @@
       max-width: 620px;
       color: var(--muted);
       line-height: 1.75;
+      text-shadow: 0 0 16px rgba(0,0,0,0.1);
     }
     .hero__text strong { color: var(--tone); }
     .hero__actions {
@@ -217,42 +219,50 @@
     .btn--oauth {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      padding: 12px 18px;
-      border-radius: 18px;
+      gap: 14px;
+      padding: 14px 20px;
+      border-radius: 20px;
       border: 1px solid rgba(255,255,255,0.14);
       background: rgba(255,255,255,0.06);
       color: var(--tone);
       font-weight: 700;
+      letter-spacing: 0.01em;
+      min-width: 220px;
       transition: transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease;
     }
     .btn--oauth:hover {
-      transform: translateY(-1px);
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(56,189,248,0.28);
-      box-shadow: 0 14px 32px rgba(0,0,0,0.18);
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,95,112,0.32);
+      box-shadow: 0 22px 45px rgba(0,0,0,0.18);
     }
     .btn--oauth-icon {
       display: inline-flex;
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       align-items: center;
       justify-content: center;
-      border-radius: 12px;
-      font-size: 1rem;
+      border-radius: 14px;
+      font-size: 0.95rem;
       flex-shrink: 0;
-      background: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.14);
     }
     .btn--oauth-google .btn--oauth-icon {
-      background: #ffffff;
-      color: #1f2937;
+      background: #fff;
+      color: #202124;
     }
     .btn--oauth-discord {
-      border-color: rgba(88,101,242,0.32);
+      border-color: rgba(255,95,112,0.32);
+      background: rgba(255,95,112,0.08);
     }
     .btn--oauth-discord .btn--oauth-icon {
-      background: linear-gradient(135deg, rgba(88,101,242,0.95), rgba(56,189,248,0.9));
+      background: linear-gradient(135deg, rgba(255,95,112,0.95), rgba(211,28,43,0.92));
       color: #fff;
+    }
+    .btn--oauth-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     .hero__stat-card {
       position: relative;
@@ -268,7 +278,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top right, rgba(88,101,242,0.22), transparent 30%);
+      background: radial-gradient(circle at top right, rgba(255,95,112,0.22), transparent 30%);
       pointer-events: none;
     }
     .hero__stat-flag {
@@ -283,7 +293,7 @@
       font-weight: 700;
     }
     .hero__stat-flag span {
-      width: 8px; height: 8px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 16px rgba(56,189,248,0.25);
+      width: 8px; height: 8px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 16px rgba(255,95,112,0.25);
     }
     .hero__stat-title {
       font-size: 1.55rem;
@@ -323,7 +333,7 @@
       background: rgba(255,255,255,0.05);
       color: var(--muted);
       font-size: 0.94rem;
-      border: 1px dashed rgba(88,101,242,0.18);
+      border: 1px dashed rgba(255,95,112,0.18);
     }
     .hero__invite strong { color: var(--tone); }
 
@@ -351,8 +361,8 @@
       width: 8px;
       height: 8px;
       border-radius: 999px;
-      background: rgba(56,189,248,0.95);
-      box-shadow: 0 0 20px rgba(56,189,248,0.2);
+      background: rgba(255,95,112,0.95);
+      box-shadow: 0 0 20px rgba(255,95,112,0.22);
     }
     .section__title {
       font-size: clamp(2rem, 3vw, 2.9rem);
@@ -391,14 +401,14 @@
     }
     .glass-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(56,189,248,0.26);
+      border-color: rgba(255,95,112,0.26);
       box-shadow: 0 32px 88px rgba(0,0,0,0.2);
     }
     .glass-card::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top left, rgba(56,189,248,0.14), transparent 25%);
+      background: radial-gradient(circle at top left, rgba(255,95,112,0.14), transparent 25%);
       pointer-events: none;
     }
     .feature-card__icon {
@@ -409,7 +419,7 @@
       border-radius: 18px;
       margin-bottom: 22px;
       color: #fff;
-      background: linear-gradient(135deg, rgba(56,189,248,0.95), rgba(88,101,242,0.92));
+      background: linear-gradient(135deg, rgba(255,95,112,0.95), rgba(211,28,43,0.92));
       box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
     }
     .feature-card h3 {
@@ -453,7 +463,7 @@
       margin-top: 6px;
       border-radius: 999px;
       background: var(--accent);
-      box-shadow: 0 0 18px rgba(56,189,248,0.25);
+      box-shadow: 0 0 18px rgba(255,95,112,0.25);
       flex-shrink: 0;
     }
 
@@ -498,8 +508,8 @@
     }
     .badge { padding: 6px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; }
     .badge--live { background: rgba(245,194,48,0.14); color: var(--gold); }
-    .badge--boost { background: rgba(88,101,242,0.13); color: #a1b2ff; }
-    .badge--vip { background: rgba(56,189,248,0.14); color: var(--accent); }
+    .badge--boost { background: rgba(255,95,112,0.14); color: #ffb4be; }
+    .badge--vip { background: rgba(255,95,112,0.12); color: var(--accent); }
 
     .giveaway-card {
       display: grid;
@@ -547,7 +557,7 @@
       content: "";
       position: absolute;
       inset: -40px;
-      background: conic-gradient(from 180deg at 50% 50%, rgba(56,189,248,0.12), rgba(88,101,242,0.14), rgba(245,194,48,0.12), transparent 65%);
+      background: conic-gradient(from 180deg at 50% 50%, rgba(255,95,112,0.15), rgba(211,28,43,0.14), rgba(245,194,48,0.12), transparent 65%);
       filter: blur(40px);
       pointer-events: none;
     }
@@ -591,16 +601,16 @@
     }
     .btn--primary {
       padding: 16px 24px;
-      background: linear-gradient(135deg, var(--blurple), var(--accent));
+      background: linear-gradient(135deg, var(--brand-red), var(--accent));
       color: #fff;
       font-weight: 700;
-      box-shadow: 0 18px 40px rgba(56,189,248,0.18);
+      box-shadow: 0 18px 40px rgba(255,95,112,0.2);
     }
     .btn--ghost {
       padding: 14px 22px;
       border: 1px solid rgba(255,255,255,0.12);
       color: var(--tone);
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.05);
     }
     .btn--primary:hover,
     .btn--ghost:hover { transform: translateY(-1px); }
@@ -660,7 +670,7 @@
           <a href="#giveaways">Giveaways</a>
           <a href="#pulse">Server Pulse</a>
         </nav>
-        <a class="nav__join btn btn--primary" href="https://discord.gg/4aB5Qbp5k" target="_blank" rel="noopener noreferrer">Join Discord</a>
+        <a class="nav__join btn btn--primary" href="https://discord.gg/4aB5Qbp5kX" target="_blank" rel="noopener noreferrer">Join Discord</a>
       </div>
     </header>
 
@@ -672,19 +682,19 @@
             <h1 class="hero__title">BloxdTuber</h1>
             <p class="hero__text">Transform from a solo Bloxd.io creator into a growth-focused channel builder with free texture packs, thumbnail templates, algorithm feedback and live Bloxd giveaways in one elite Discord.</p>
             <div class="hero__actions">
-              <a class="btn btn--primary" href="https://discord.gg/4aB5Qbp5k" target="_blank" rel="noopener noreferrer">Join BloxdTuber</a>
+              <a class="btn btn--primary" href="https://discord.gg/4aB5Qbp5kX" target="_blank" rel="noopener noreferrer">Join BloxdTuber</a>
               <a class="btn btn--ghost" href="#toolkit">Explore the Toolkit</a>
             </div>
             <div class="hero__auth">
               <p>Connect with account-based signup to launch faster. Google and Discord auth are ready for your integration.</p>
               <div class="hero__auth-buttons">
-                <a class="btn btn--oauth btn--oauth-google" href="/auth/google" title="Google OAuth signup placeholder">
-                  <span class="btn--oauth-icon">G</span>
-                  Sign up with Google
+                <a class="btn btn--oauth btn--oauth-google" href="/auth/google" title="Sign up with Google">
+                  <span class="btn--oauth-icon" aria-hidden="true">Google</span>
+                  <span class="btn--oauth-label">Sign up with Google</span>
                 </a>
-                <a class="btn btn--oauth btn--oauth-discord" href="/auth/discord" title="Discord OAuth signup placeholder">
-                  <span class="btn--oauth-icon">D</span>
-                  Sign up with Discord
+                <a class="btn btn--oauth btn--oauth-discord" href="/auth/discord" title="Sign up with Discord">
+                  <span class="btn--oauth-icon" aria-hidden="true">Discord</span>
+                  <span class="btn--oauth-label">Sign up with Discord</span>
                 </a>
               </div>
             </div>
@@ -709,7 +719,7 @@
             </div>
             <div class="hero__invite">
               <strong>Official invite</strong>
-              <span>discord.gg/4aB5Qbp5k</span>
+              <span>discord.gg/4aB5Qbp5kX</span>
             </div>
           </aside>
         </div>
@@ -831,7 +841,7 @@
             </div>
             <div class="hero__invite">
               <strong>Invite</strong>
-              <span><a href="https://discord.gg/4aB5Qbp5k" target="_blank" rel="noopener noreferrer" style="color: inherit;">discord.gg/4aB5Qbp5k</a></span>
+              <span><a href="https://discord.gg/4aB5Qbp5kX" target="_blank" rel="noopener noreferrer" style="color: inherit;">discord.gg/4aB5Qbp5kX</a></span>
             </div>
           </article>
 
@@ -843,7 +853,7 @@
               <li>• Weekly giveaways, booster rewards and spotlight contests.</li>
               <li>• Organized channels for resources, promotions and youtuber support.</li>
             </ul>
-            <a class="btn btn--primary" href="https://discord.gg/4aB5Qbp5k" target="_blank" rel="noopener noreferrer">Join the Official Server</a>
+            <a class="btn btn--primary" href="https://discord.gg/4aB5Qbp5kX" target="_blank" rel="noopener noreferrer">Join the Official Server</a>
           </aside>
         </div>
       </section>
@@ -853,7 +863,7 @@
           <div class="hero__eyebrow">Ready to level up</div>
           <h2>From content draft to Bloxd.io launch-ready in one Discord.</h2>
           <p>Join BloxdTuber and use our creator toolkit, live giveaways, and expert feedback to stop wasting time and start growing faster.</p>
-          <a class="btn btn--primary" href="https://discord.gg/4aB5Qbp5k" target="_blank" rel="noopener noreferrer">Join the Discord Now</a>
+          <a class="btn btn--primary" href="https://discord.gg/4aB5Qbp5kX" target="_blank" rel="noopener noreferrer">Join the Discord Now</a>
         </div>
       </section>
     </main>
